@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 //Pages
 import HomePage from "./pages/HomePage/HomePage";
+import ProductPage from "./pages/ProductPage/ProductPage";
 
 //Components
 import Navbar from "./components/Navbar/Navbar";
@@ -21,7 +22,7 @@ function App() {
       <main>
         <Routes>
           <Route exact path="/" element={<HomePage />} />
-          <Route exact path="/product/:id" />
+          <Route exact path="/product/:id" element={<ProductPage />} />
           <Route exact path="/cart" />
         </Routes>
       </main>
