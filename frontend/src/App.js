@@ -3,9 +3,7 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 //Pages
-import CartPage from "./pages/CartPage/CartPage";
 import HomePage from "./pages/HomePage/HomePage";
-import ProductPage from "./pages/ProductPage/ProductPage";
 
 //Components
 import Navbar from "./components/Navbar/Navbar";
@@ -22,9 +20,9 @@ function App() {
       <Backdrop show={sideToggle} click={() => setSideToggle(false)} />
       <main>
         <Routes>
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/product/:id" component={ProductPage} />
-          <Route exact path="/cart" component={CartPage} />
+          <Route exact path="/" element={<HomePage />} />
+          <Route exact path="/product/:id" />
+          <Route exact path="/cart" />
         </Routes>
       </main>
     </Router>
