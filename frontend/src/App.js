@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //Pages
 import HomePage from "./pages/HomePage/HomePage";
 import ProductPage from "./pages/ProductPage/ProductPage";
+import CartPage from "./pages/CartPage/CartPage";
 
 //Components
 import Navbar from "./components/Navbar/Navbar";
@@ -23,7 +24,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<HomePage />} />
           <Route exact path="/product/:id" element={<ProductPage />} />
-          <Route exact path="/cart" />
+          <Route exact path="/cart" element={<CartPage />} />
         </Routes>
       </main>
     </Router>
